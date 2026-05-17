@@ -312,6 +312,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#target">Audience</a></li>
+    <li><a href="#deals">Deals</a></li>
     <li><a href="#team">Team</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -454,32 +455,130 @@
   </div>
 </section>
 
+<!-- DEALS SECTION -->
+<section id="deals" style="background: var(--cream); padding: 120px 60px;">
+  <p class="section-label fade-in" style="color: var(--orange);">Live Deals</p>
+  <h2 class="section-title fade-in" style="color: var(--black); margin-bottom: 16px;">TODAY'S<br>TOP DEALS.</h2>
+  <p style="font-size:0.9rem; color: rgba(0,0,0,0.5); font-weight:300; margin-bottom: 48px;" class="fade-in">Streetwear discounts near you and online, updated daily.</p>
+
+  <!-- Filters -->
+  <div class="fade-in" style="display:flex; gap:8px; margin-bottom:48px; flex-wrap:wrap;">
+    <button onclick="filterDeals('all')" id="btn-all" style="font-family:'Archivo Black',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; padding:10px 20px; background:var(--black); color:var(--white); border:none; cursor:pointer;">All</button>
+    <button onclick="filterDeals('local')" id="btn-local" style="font-family:'Archivo Black',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--black); border:1.5px solid rgba(0,0,0,0.2); cursor:pointer;">Local</button>
+    <button onclick="filterDeals('online')" id="btn-online" style="font-family:'Archivo Black',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--black); border:1.5px solid rgba(0,0,0,0.2); cursor:pointer;">Online</button>
+    <button onclick="filterDeals('secondhand')" id="btn-secondhand" style="font-family:'Archivo Black',sans-serif; font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; padding:10px 20px; background:transparent; color:var(--black); border:1.5px solid rgba(0,0,0,0.2); cursor:pointer;">Second-Hand</button>
+  </div>
+
+  <!-- Deal Cards -->
+  <div id="deals-grid" style="display:grid; grid-template-columns: repeat(3,1fr); gap:2px;">
+
+    <div class="deal-card fade-in" data-type="local" style="background:var(--black); padding:36px 28px; position:relative;">
+      <div style="font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--orange); font-weight:700; margin-bottom:20px;">Local — Barcelona</div>
+      <div style="font-family:'Archivo Black',sans-serif; font-size:1.05rem; text-transform:uppercase; color:var(--white); margin-bottom:8px;">Nike Air Force 1</div>
+      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:24px; font-weight:300;">Foot Locker · Passeig de Gràcia</div>
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Archivo Black',sans-serif; font-size:1.6rem; color:var(--white);">69€</span>
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.3); text-decoration:line-through;">110€</span>
+      </div>
+      <div style="position:absolute; top:28px; right:28px; background:var(--orange); font-family:'Archivo Black',sans-serif; font-size:0.8rem; padding:6px 12px; color:var(--white);">-37%</div>
+    </div>
+
+    <div class="deal-card fade-in" data-type="online" style="background:var(--black); padding:36px 28px; position:relative;">
+      <div style="font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--orange); font-weight:700; margin-bottom:20px;">Online — SNIPES</div>
+      <div style="font-family:'Archivo Black',sans-serif; font-size:1.05rem; text-transform:uppercase; color:var(--white); margin-bottom:8px;">Adidas Hoodie Essential</div>
+      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:24px; font-weight:300;">snipes.com · Free shipping</div>
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Archivo Black',sans-serif; font-size:1.6rem; color:var(--white);">34€</span>
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.3); text-decoration:line-through;">60€</span>
+      </div>
+      <div style="position:absolute; top:28px; right:28px; background:var(--orange); font-family:'Archivo Black',sans-serif; font-size:0.8rem; padding:6px 12px; color:var(--white);">-43%</div>
+    </div>
+
+    <div class="deal-card fade-in" data-type="secondhand" style="background:var(--black); padding:36px 28px; position:relative;">
+      <div style="font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--orange); font-weight:700; margin-bottom:20px;">Second-Hand</div>
+      <div style="font-family:'Archivo Black',sans-serif; font-size:1.05rem; text-transform:uppercase; color:var(--white); margin-bottom:8px;">Supreme Box Logo Tee</div>
+      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:24px; font-weight:300;">Good condition · Size M</div>
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Archivo Black',sans-serif; font-size:1.6rem; color:var(--white);">45€</span>
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.3); text-decoration:line-through;">120€</span>
+      </div>
+      <div style="position:absolute; top:28px; right:28px; background:var(--orange); font-family:'Archivo Black',sans-serif; font-size:0.8rem; padding:6px 12px; color:var(--white);">-63%</div>
+    </div>
+
+    <div class="deal-card fade-in" data-type="online" style="background:var(--black); padding:36px 28px; position:relative;">
+      <div style="font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--orange); font-weight:700; margin-bottom:20px;">Online — Zalando</div>
+      <div style="font-family:'Archivo Black',sans-serif; font-size:1.05rem; text-transform:uppercase; color:var(--white); margin-bottom:8px;">New Balance 574</div>
+      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:24px; font-weight:300;">zalando.es · 2 sizes left</div>
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Archivo Black',sans-serif; font-size:1.6rem; color:var(--white);">59€</span>
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.3); text-decoration:line-through;">90€</span>
+      </div>
+      <div style="position:absolute; top:28px; right:28px; background:var(--orange); font-family:'Archivo Black',sans-serif; font-size:0.8rem; padding:6px 12px; color:var(--white);">-34%</div>
+    </div>
+
+    <div class="deal-card fade-in" data-type="local" style="background:var(--black); padding:36px 28px; position:relative;">
+      <div style="font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--orange); font-weight:700; margin-bottom:20px;">Local — Barcelona</div>
+      <div style="font-family:'Archivo Black',sans-serif; font-size:1.05rem; text-transform:uppercase; color:var(--white); margin-bottom:8px;">Carhartt WIP Jacket</div>
+      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:24px; font-weight:300;">Urban Outfitters · El Triangle</div>
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Archivo Black',sans-serif; font-size:1.6rem; color:var(--white);">89€</span>
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.3); text-decoration:line-through;">140€</span>
+      </div>
+      <div style="position:absolute; top:28px; right:28px; background:var(--orange); font-family:'Archivo Black',sans-serif; font-size:0.8rem; padding:6px 12px; color:var(--white);">-36%</div>
+    </div>
+
+    <div class="deal-card fade-in" data-type="secondhand" style="background:var(--black); padding:36px 28px; position:relative;">
+      <div style="font-size:0.65rem; letter-spacing:2px; text-transform:uppercase; color:var(--orange); font-weight:700; margin-bottom:20px;">Second-Hand</div>
+      <div style="font-family:'Archivo Black',sans-serif; font-size:1.05rem; text-transform:uppercase; color:var(--white); margin-bottom:8px;">Stüssy Cap 8-Panel</div>
+      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); margin-bottom:24px; font-weight:300;">Excellent condition · One size</div>
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Archivo Black',sans-serif; font-size:1.6rem; color:var(--white);">18€</span>
+        <span style="font-size:0.85rem; color:rgba(255,255,255,0.3); text-decoration:line-through;">50€</span>
+      </div>
+      <div style="position:absolute; top:28px; right:28px; background:var(--orange); font-family:'Archivo Black',sans-serif; font-size:0.8rem; padding:6px 12px; color:var(--white);">-64%</div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function filterDeals(type) {
+  const cards = document.querySelectorAll('.deal-card');
+  const btns = document.querySelectorAll('[id^="btn-"]');
+  btns.forEach(b => {
+    b.style.background = 'transparent';
+    b.style.color = 'var(--black)';
+    b.style.border = '1.5px solid rgba(0,0,0,0.2)';
+  });
+  const active = document.getElementById('btn-' + type);
+  active.style.background = 'var(--black)';
+  active.style.color = 'var(--white)';
+  active.style.border = 'none';
+  cards.forEach(c => {
+    c.style.display = (type === 'all' || c.dataset.type === type) ? 'block' : 'none';
+  });
+}
+</script>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-info">
     <p class="section-label fade-in">Get In Touch</p>
-    <h2 class="section-title fade-in">LET'S BUILD<br>SOMETHING<br>THAT LASTS.</h2>
+    <h2 class="section-title fade-in">CONTACT<br>US.</h2>
     <p class="section-desc fade-in" style="margin-bottom:48px;">Want to partner up, invest, or just get early access? Reach out.</p>
     <div class="fade-in">
       <div class="contact-item">
         <div class="contact-icon">@</div>
         <div>
-          <div class="contact-item-label">Email</div>
-          <div class="contact-item-value">hello@streetdeal.app</div>
+          <div class="contact-item-label">Ahmad Mustafa</div>
+          <div class="contact-item-value">amustaf@elpuig.xeill.net</div>
         </div>
       </div>
       <div class="contact-item">
-        <div class="contact-icon">T</div>
+        <div class="contact-icon">@</div>
         <div>
-          <div class="contact-item-label">Phone</div>
-          <div class="contact-item-value">+34 600 000 000</div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">W</div>
-        <div>
-          <div class="contact-item-label">Website</div>
-          <div class="contact-item-value">www.streetdeal.app</div>
+          <div class="contact-item-label">Adrià Díez</div>
+          <div class="contact-item-value">adiez@elpuig.xeill.net</div>
         </div>
       </div>
     </div>
